@@ -16,26 +16,26 @@
         my_touches_time,
         dragByGuesture;
     const keyMap = {
-        "ArrowRight": { rate: 2, message: "2.0 倍数" },
-        "Right": { rate: 2, message: "2.0 倍数" },
-        "NavigationRight": { rate: 2, message: "2.0 倍数" },
-        "GamepadDPadRight": { rate: 2, message: "2.0 倍数" },
-        "GamepadLeftThumbStickRight": { rate: 2, message: "2.0 倍数" },
-        "GamepadLeftThumbstickRight": { rate: 2, message: "2.0 倍数" },
-        "ArrowLeft": { rate: 1, message: "1.0 倍数" },
-        "Left": { rate: 1, message: "1.0 倍数" },
-        "NavigationLeft": { rate: 1, message: "1.0 倍数" },
-        "GamepadDPadLeft": { rate: 1, message: "1.0 倍数" },
-        "GamepadLeftThumbStickLeft": { rate: 1, message: "1.0 倍数" },
-        "GamepadLeftThumbstickLeft": { rate: 1, message: "1.0 倍数" },
-        "`": { rate: 1, message: "1.0 倍数" },
-        "0": { rate: 1, message: "1.0 倍数" },
-        "1": { rate: 1.5, message: "1.5 倍数" },
-        "2": { rate: 2, message: "2.0 倍数" },
-        "3": { rate: 2.5, message: "2.5 倍数" },
-        "4": { rate: 3, message: "3.0 倍数" },
-        "5": { rate: 3.5, message: "3.5 倍数" },
-        "6": { rate: 4, message: "4.0 倍数" },
+        "ArrowRight": { rate: 2, message: "2.0x" },
+        "Right": { rate: 2, message: "2.0x" },
+        "NavigationRight": { rate: 2, message: "2.0x" },
+        "GamepadDPadRight": { rate: 2, message: "2.0x" },
+        "GamepadLeftThumbStickRight": { rate: 2, message: "2.0x" },
+        "GamepadLeftThumbstickRight": { rate: 2, message: "2.0x" },
+        "ArrowLeft": { rate: 1, message: "1.0x" },
+        "Left": { rate: 1, message: "1.0x" },
+        "NavigationLeft": { rate: 1, message: "1.0x" },
+        "GamepadDPadLeft": { rate: 1, message: "1.0x" },
+        "GamepadLeftThumbStickLeft": { rate: 1, message: "1.0x" },
+        "GamepadLeftThumbstickLeft": { rate: 1, message: "1.0x" },
+        "`": { rate: 1, message: "1.0x" },
+        "0": { rate: 1, message: "1.0x" },
+        "1": { rate: 1.5, message: "1.5x" },
+        "2": { rate: 2, message: "2.0x" },
+        "3": { rate: 2.5, message: "2.5x" },
+        "4": { rate: 3, message: "3.0x" },
+        "5": { rate: 3.5, message: "3.5x" },
+        "6": { rate: 4, message: "4.0x" },
     };
     var isTouchDevice = 'ontouchstart' in document.documentElement;
     document.addEventListener("viewbeforeshow", function (e) {
@@ -121,7 +121,7 @@
                     view.currentPlayer.setPlaybackRate(my_touches_rate * 2);
                     view.boundHideOsd();
                     require(["toast"], function (toast) {
-                        toast(my_touches_rate * 2 + " 倍数");
+                        toast(my_touches_rate * 2 + "x");
                     });
                 }
             }, 700);

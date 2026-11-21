@@ -1,8 +1,8 @@
 (function () {
     "use strict";
-    /* page item.Type "Person" "Movie" "Series" "Season" "Episode" "BoxSet" "video-osd" so. */
+    /* Supported page item.Type: "Person", "Movie", "Series", "Season", "Episode", "BoxSet", "video-osd", etc. */
     const show_pages = ["Movie", "Series", "Episode", "Season", "video-osd"];
-    var item, paly_mutation;
+    var item, play_mutation;
 
     /* document.addEventListener("itemshow", function (e) {
         item = e.detail.item;
@@ -11,7 +11,7 @@
         // }
     }); */
     document.addEventListener("viewbeforeshow", function (e) {
-        paly_mutation?.disconnect();
+        play_mutation?.disconnect();
         if (e.detail.path === "/item" || e.detail.type === "video-osd") {
             if (!e.detail.isRestored) {
                 const mutation = new MutationObserver(async function () {
@@ -32,15 +32,15 @@
                                 e.target.controller.currentItem && (e.target.controller.currentItem.People = item.People);
                             }, 1000); */
                             if (e.detail.type === "video-osd") {
-                                paly_mutation = new MutationObserver(function () {
+                                play_mutation = new MutationObserver(function () {
                                     let itemsContainer = e.target.querySelector('[data-index="2"].videoosd-itemstab .itemsContainer');
                                     if (itemsContainer) {
-                                        paly_mutation.disconnect();
+                                        play_mutation.disconnect();
                                         itemsContainer.fetchData = filterPeople.bind(item);
                                     }
 
                                 });
-                                paly_mutation.observe(e.target.querySelector('[data-index="2"].videoosd-itemstab'), {
+                                play_mutation.observe(e.target.querySelector('[data-index="2"].videoosd-itemstab'), {
                                     childList: true,
                                     characterData: true,
                                     subtree: true,
