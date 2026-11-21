@@ -24,7 +24,7 @@
         }
     }
     Util.upLocal();
-    /* 预告URL缓存2天 */
+    /* Cache trailer URL for 2 days / ট্রেলার URL ২ দিনের জন্য ক্যাশ রাখা হবে */
     const trailer_cache_time = 2 * 8.64e7;
     const storage = {
         set(key, val, expired) {
