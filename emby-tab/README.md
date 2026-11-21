@@ -145,3 +145,10 @@ var customtabs = {
    <script type="text/javascript" src="emby-tab.js"></script>
    ```
 ৩. ব্রাউজার ক্যাশ ক্লিয়ার করে পেজ রিলোড দিন।
+
+---
+
+### 👤 Author & Maintainer / লেখক ও রক্ষণাবেক্ষণকারী
+- **Maintainer**: **Sohag** ([@Sohag-Dev12](https://github.com/Sohag-Dev12))
+- **Repository**: [https://github.com/Sohag-Dev12/emby-web-mod](https://github.com/Sohag-Dev12/emby-web-mod)
+- **License**: MIT

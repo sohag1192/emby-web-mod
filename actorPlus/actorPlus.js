@@ -1,3 +1,9 @@
+/**
+ * actorPlus - Hide actors/crew without avatars in Emby Web
+ * Maintainer: Sohag (https://github.com/Sohag-Dev12)
+ * Repository: https://github.com/Sohag-Dev12/emby-web-mod
+ */
+
 (function () {
     "use strict";
     /* Supported page item.Type: "Person", "Movie", "Series", "Season", "Episode", "BoxSet", "video-osd", etc. */

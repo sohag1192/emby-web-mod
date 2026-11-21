@@ -77,3 +77,10 @@ Add `actorPlus.js` via **Emby.CustomCssJS** or inject it into `index.html`:
 *(কেবলমাত্র ছবিযুক্ত অভিনেতাদের পরিচ্ছন্ন তালিকা প্রদর্শিত হচ্ছে)*
 
 ![ব্যবহারের পরে](https://github.com/jackloves111/emby-front-end-mod/assets/89971817/1b81f489-490a-47fe-9817-0254bbdd4b38)
+
+---
+
+### 👤 Author & Maintainer / লেখক ও রক্ষণাবেক্ষণকারী
+- **Maintainer**: **Sohag** ([@Sohag-Dev12](https://github.com/Sohag-Dev12))
+- **Repository**: [https://github.com/Sohag-Dev12/emby-web-mod](https://github.com/Sohag-Dev12/emby-web-mod)
+- **License**: MIT

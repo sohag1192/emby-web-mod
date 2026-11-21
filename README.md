@@ -6,6 +6,7 @@
 </p>
 
 <p align="center">
+  <b>Maintained by <a href="https://github.com/Sohag-Dev12">Sohag (@Sohag-Dev12)</a></b><br>
   <a href="#-english"><b>English</b></a> •
   <a href="#-বাংলা-bengali"><b>বাংলা (Bengali)</b></a>
 </p>
@@ -109,3 +110,10 @@ Emby সার্ভার আপডেটের পরও স্ক্রিপ
 ### 💡 কিছু গুরুত্বপূর্ণ পরামর্শ
 - **পছন্দমতো ব্যবহার**: সবগুলো মডিউল একসাথে ব্যবহার করা বাধ্যতামূলক নয়; আপনার যেটি প্রয়োজন কেবল সেটিই ব্যবহার করতে পারেন।
 - **ক্যাশ সমস্যা**: স্ক্রিপ্ট আপডেট করার পর পরিবর্তন দেখতে না পেলে ব্রাউজার ক্যাশ ক্লিয়ার করুন (`Ctrl + F5`) অথবা ফাইলের নামের শেষে ভার্সন প্যারামিটার যুক্ত করুন (যেমন `module.js?v=2`)।
+
+---
+
+### 👤 Author & Maintainer / লেখক ও রক্ষণাবেক্ষণকারী
+- **Maintainer**: **Sohag** ([@Sohag-Dev12](https://github.com/Sohag-Dev12))
+- **Repository**: [https://github.com/Sohag-Dev12/emby-web-mod](https://github.com/Sohag-Dev12/emby-web-mod)
+- **License**: MIT

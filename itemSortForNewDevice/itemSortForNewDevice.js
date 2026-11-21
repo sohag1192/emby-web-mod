@@ -1,3 +1,9 @@
+/**
+ * itemSortForNewDevice - Default sorting configuration for new Emby devices
+ * Maintainer: Sohag (https://github.com/Sohag-Dev12)
+ * Repository: https://github.com/Sohag-Dev12/emby-web-mod
+ */
+
 (function () {
     'use strict';
     var sort = {

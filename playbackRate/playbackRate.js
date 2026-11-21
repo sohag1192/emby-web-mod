@@ -1,3 +1,9 @@
+/**
+ * playbackRate - Video playback speed shortcuts and gestures for Emby Web
+ * Maintainer: Sohag (https://github.com/Sohag-Dev12)
+ * Repository: https://github.com/Sohag-Dev12/emby-web-mod
+ */
+
 (function () {
     "use strict";
     var keydownFlag = false;

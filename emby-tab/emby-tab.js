@@ -1,3 +1,9 @@
+/**
+ * emby-tab - Customize and hide navigation tabs in Emby Web
+ * Maintainer: Sohag (https://github.com/Sohag-Dev12)
+ * Repository: https://github.com/Sohag-Dev12/emby-web-mod
+ */
+
 (function () {
 	'use strict';
 	var item, customtabs = {

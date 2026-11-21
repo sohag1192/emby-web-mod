@@ -162,3 +162,10 @@ To hide the default Emby hero section (Section 0) so only the new Swiper carouse
 ### 🔗 রেফারেন্স ও কৃতজ্ঞতা স্বীকার
 - মূল আইডিয়া: [Nolovenodie/emby-crx](https://github.com/Nolovenodie/emby-crx)
 - ক্যারোজেল ইঞ্জিন: [Swiper.js](https://swiperjs.com)
+
+---
+
+### 👤 Author & Maintainer / লেখক ও রক্ষণাবেক্ষণকারী
+- **Maintainer**: **Sohag** ([@Sohag-Dev12](https://github.com/Sohag-Dev12))
+- **Repository**: [https://github.com/Sohag-Dev12/emby-web-mod](https://github.com/Sohag-Dev12/emby-web-mod)
+- **License**: MIT
