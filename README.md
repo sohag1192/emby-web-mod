@@ -6,6 +6,11 @@
 </p>
 
 <p align="center">
+  <b>Maintained by <a href="https://github.com/Sohag-Dev12">Sohag (@Sohag-Dev12)</a></b><br>
+  <a href="https://github.com/Sohag-Dev12/emby-web-mod/releases/latest"><img src="https://img.shields.io/github/v/release/Sohag-Dev12/emby-web-mod?style=flat-square&color=00a4dc&label=Release" alt="Latest Release"></a>
+  <a href="https://github.com/Sohag-Dev12/emby-web-mod/releases/latest/download/emby-web-mod.zip"><img src="https://img.shields.io/badge/Download-Release%20ZIP-2ea44f?style=flat-square&logo=github" alt="Download ZIP"></a>
+  <a href="https://github.com/Sohag-Dev12/emby-web-mod/releases"><img src="https://img.shields.io/github/downloads/Sohag-Dev12/emby-web-mod/total?style=flat-square&color=8a2be2" alt="Total Downloads"></a>
+  <br>
   <a href="#-english"><b>English</b></a> •
   <a href="#-বাংলা-bengali"><b>বাংলা (Bengali)</b></a>
 </p>
@@ -16,6 +21,18 @@
 ## 🌐 English
 
 Welcome to **Emby Web Mod**, a curated suite of modular client-side JavaScript extensions designed to elevate your Emby web client experience. Each module is self-contained and can be installed individually or combined with others.
+
+### 📥 Download & Quick Start
+
+Get the complete package ready to use with your Emby Web client:
+
+| Asset | Download Link | Description |
+|:---|:---|:---|
+| **Release Package (ZIP)** | [⬇️ **`emby-web-mod.zip`**](https://github.com/Sohag-Dev12/emby-web-mod/releases/latest/download/emby-web-mod.zip) | Recommended: Pre-packaged ZIP with all modules & assets |
+| **All Releases & Notes** | [🏷️ **GitHub Releases**](https://github.com/Sohag-Dev12/emby-web-mod/releases) | Browse changelogs, versions, and previous release tags |
+| **Source Code (ZIP)** | [📦 **`main.zip`**](https://github.com/Sohag-Dev12/emby-web-mod/archive/refs/heads/main.zip) | Direct archive of latest commit from `main` branch |
+
+---
 
 ### 🎨 Modules Overview
 
@@ -67,6 +84,18 @@ If you do not use plugins or host Emby Web statically:
 
 **Emby Web Mod**-এ আপনাকে স্বাগতম। এটি Emby ওয়েব ক্লায়েন্টের ইন্টারফেস ও কার্যক্ষমতা বাড়ানোর জন্য একাধিক মডিউলার জাভাস্ক্রিপ্ট স্ক্রিপ্টের একটি সমন্বিত প্যাকেজ। প্রতিটি মডিউল সম্পূর্ণ স্বাধীন, তাই আপনি আপনার প্রয়োজন অনুযায়ী যেকোনো মডিউল এককভাবে অথবা একসাথে ব্যবহার করতে পারেন।
 
+### 📥 ডাউনলোড ও কুইক স্টার্ট
+
+আপনার Emby ওয়েব ক্লায়েন্টে ব্যবহারের জন্য সম্পূর্ণ প্যাকেজটি এক ক্লিকে ডাউনলোড করুন:
+
+| প্যাকেজ | ডাউনলোড লিঙ্ক | বিবরণ |
+|:---|:---|:---|
+| **রিলিজ প্যাকেজ (ZIP)** | [⬇️ **`emby-web-mod.zip`**](https://github.com/Sohag-Dev12/emby-web-mod/releases/latest/download/emby-web-mod.zip) | প্রস্তাবিত: সকল প্রস্তুতকৃত মডিউলসহ সম্পূর্ণ জিপ ফাইল |
+| **সকল রিলিজ ও চেঞ্জলগ** | [🏷️ **GitHub Releases**](https://github.com/Sohag-Dev12/emby-web-mod/releases) | পূর্ববর্তী সংস্করণ, রিলিজ নোট এবং ভার্সন ট্যাগ দেখুন |
+| **সোর্স কোড (ZIP)** | [📦 **`main.zip`**](https://github.com/Sohag-Dev12/emby-web-mod/archive/refs/heads/main.zip) | `main` ব্রাঞ্চের সর্বশেষ কোডের সরাসরি জিপ আর্কাইভ |
+
+---
+
 ### 🎨 মডিউলসমূহের বিবরণ
 
 | নং | মডিউল | ডিরেক্টরি | বিবরণ |
@@ -109,3 +138,10 @@ Emby সার্ভার আপডেটের পরও স্ক্রিপ
 ### 💡 কিছু গুরুত্বপূর্ণ পরামর্শ
 - **পছন্দমতো ব্যবহার**: সবগুলো মডিউল একসাথে ব্যবহার করা বাধ্যতামূলক নয়; আপনার যেটি প্রয়োজন কেবল সেটিই ব্যবহার করতে পারেন।
 - **ক্যাশ সমস্যা**: স্ক্রিপ্ট আপডেট করার পর পরিবর্তন দেখতে না পেলে ব্রাউজার ক্যাশ ক্লিয়ার করুন (`Ctrl + F5`) অথবা ফাইলের নামের শেষে ভার্সন প্যারামিটার যুক্ত করুন (যেমন `module.js?v=2`)।
+
+---
+
+### 👤 Author & Maintainer / লেখক ও রক্ষণাবেক্ষণকারী
+- **Maintainer**: **Sohag** ([@Sohag-Dev12](https://github.com/Sohag-Dev12))
+- **Repository**: [https://github.com/Sohag-Dev12/emby-web-mod](https://github.com/Sohag-Dev12/emby-web-mod)
+- **License**: MIT

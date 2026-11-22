@@ -1,0 +1,128 @@
+name: Auto Release & Package
+
+'on':
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Custom version tag (e.g. v1.0.1). Leave empty to auto-bump patch.'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build & Publish Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve Version Tag
+        id: resolve_version
+        run: |
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          if echo "$COMMIT_MSG" | grep -qi "\[skip release\]"; then
+            echo "Skipping release due to [skip release] tag in commit message."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+          # 1. Custom version from manual dispatch
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.version }}" ]; then
+            TAG="${{ github.event.inputs.version }}"
+            [[ "$TAG" =~ ^v ]] || TAG="v$TAG"
+            echo "Using manual input tag: $TAG"
+          # 2. Tag push event
+          elif [ "${{ startsWith(github.ref, 'refs/tags/v') }}" = "true" ]; then
+            TAG="${GITHUB_REF#refs/tags/}"
+            echo "Using pushed tag: $TAG"
+          # 3. Push to main branch: compute auto-bump or use existing tag at HEAD
+          else
+            HEAD_TAG=$(git tag --points-at HEAD 2>/dev/null | grep -E '^v[0-9]+' | head -n 1 || echo "")
+            if [ -n "$HEAD_TAG" ]; then
+              TAG="$HEAD_TAG"
+              echo "HEAD already tagged: $TAG"
+            else
+              LATEST_TAG=$(git tag -l "v*" --sort=-v:refname | head -n 1 || echo "")
+              if [ -z "$LATEST_TAG" ]; then
+                TAG="v1.0.0"
+                echo "No existing tags found. Starting initial release: $TAG"
+              else
+                echo "Latest tag found: $LATEST_TAG"
+                VERSION="${LATEST_TAG#v}"
+                IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
+                MAJOR=${MAJOR:-1}
+                MINOR=${MINOR:-0}
+                PATCH=${PATCH:-0}
+
+                if echo "$COMMIT_MSG" | grep -qi "BREAKING"; then
+                  MAJOR=$((MAJOR + 1))
+                  MINOR=0
+                  PATCH=0
+                elif echo "$COMMIT_MSG" | grep -Eqi "^(feat|feature)(\(.*\))?:"; then
+                  MINOR=$((MINOR + 1))
+                  PATCH=0
+                else
+                  PATCH=$((PATCH + 1))
+                fi
+                TAG="v${MAJOR}.${MINOR}.${PATCH}"
+                echo "Auto-bumped tag: $TAG"
+              fi
+            fi
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Create Git Tag if New
+        if: steps.resolve_version.outputs.skip != 'true'
+        env:
+          TAG: ${{ steps.resolve_version.outputs.tag }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "Creating and pushing tag: $TAG"
+            git tag -a "$TAG" -m "Release $TAG"
+            git push origin "$TAG"
+          else
+            echo "Tag $TAG already exists on git."
+          fi
+
+      - name: Build Distribution ZIP
+        if: steps.resolve_version.outputs.skip != 'true'
+        run: |
+          echo "Packaging all modules into emby-web-mod.zip..."
+          zip -r emby-web-mod.zip . \
+            -x ".git/*" \
+            -x ".git*" \
+            -x ".github/*" \
+            -x ".github*" \
+            -x "*.DS_Store" \
+            -x "*.tmp"
+          echo "Created emby-web-mod.zip successfully. Size:"
+          ls -lh emby-web-mod.zip
+
+      - name: Publish GitHub Release
+        if: steps.resolve_version.outputs.skip != 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.resolve_version.outputs.tag }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release $TAG exists. Uploading emby-web-mod.zip asset..."
+            gh release upload "$TAG" emby-web-mod.zip --clobber
+          else
+            echo "Creating release $TAG with generated release notes..."
+            gh release create "$TAG" emby-web-mod.zip \
+              --title "Release $TAG" \
+              --generate-notes
+          fi

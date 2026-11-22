@@ -115,3 +115,10 @@ this.extraFlag = false;
 ### 🔗 কৃতজ্ঞতা স্বীকার ও প্রযুক্তি
 - ক্যারোজেল ইঞ্জিন: [Swiper.js](https://swiperjs.com)
 - লাইটবক্স ভিউয়ার: [Viewer.js](https://fengyuanchen.github.io/viewerjs)
+
+---
+
+### 👤 Author & Maintainer / লেখক ও রক্ষণাবেক্ষণকারী
+- **Maintainer**: **Sohag** ([@Sohag-Dev12](https://github.com/Sohag-Dev12))
+- **Repository**: [https://github.com/Sohag-Dev12/emby-web-mod](https://github.com/Sohag-Dev12/emby-web-mod)
+- **License**: MIT

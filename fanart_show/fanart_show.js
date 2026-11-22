@@ -1,3 +1,9 @@
+/**
+ * fanart_show - Fanart & stills interactive lightbox gallery for Emby Web
+ * Maintainer: Sohag (https://github.com/Sohag-Dev12)
+ * Repository: https://github.com/Sohag-Dev12/emby-web-mod
+ */
+
 class CommonUtilsStage {
     static sleep(ms) {
         return new Promise((resolve, reject) => {

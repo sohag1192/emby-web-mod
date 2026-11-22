@@ -95,3 +95,10 @@ Code references and special thanks to:
 এই ফিচারের মূল কোড ও অনুপ্রেরণার জন্য কৃতজ্ঞতা:
 - Bolin Chan-এর প্রজেক্ট [bolin-dev/JavPack](https://github.com/bolin-dev/JavPack) (`JavDB.trailer.user.js`)।
 - [XingyiHua2024/Emby-Javascript-Details](https://github.com/XingyiHua2024/Emby-Javascript-Details)।
+
+---
+
+### 👤 Author & Maintainer / লেখক ও রক্ষণাবেক্ষণকারী
+- **Maintainer**: **Sohag** ([@Sohag-Dev12](https://github.com/Sohag-Dev12))
+- **Repository**: [https://github.com/Sohag-Dev12/emby-web-mod](https://github.com/Sohag-Dev12/emby-web-mod)
+- **License**: MIT

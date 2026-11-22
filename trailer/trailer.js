@@ -1,3 +1,9 @@
+/**
+ * trailer - Video trailer preview on poster hover for Emby Web
+ * Maintainer: Sohag (https://github.com/Sohag-Dev12)
+ * Repository: https://github.com/Sohag-Dev12/emby-web-mod
+ */
+
 (function () {
     class Util {
         static upLocal() {

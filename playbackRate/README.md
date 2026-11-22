@@ -105,3 +105,10 @@ Special thanks to the open-source community contributors and original creators (
 
 ### 🔗 কৃতজ্ঞতা স্বীকার
 এই ফিচারের মূল কোড ও অনুপ্রেরণার জন্য ওপেন-সোর্স কমিউনিটি ও মূল নির্মাতাদের প্রতি বিশেষ ধন্যবাদ ও কৃতজ্ঞতা।
+
+---
+
+### 👤 Author & Maintainer / লেখক ও রক্ষণাবেক্ষণকারী
+- **Maintainer**: **Sohag** ([@Sohag-Dev12](https://github.com/Sohag-Dev12))
+- **Repository**: [https://github.com/Sohag-Dev12/emby-web-mod](https://github.com/Sohag-Dev12/emby-web-mod)
+- **License**: MIT
